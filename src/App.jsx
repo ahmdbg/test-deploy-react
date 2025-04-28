@@ -6,7 +6,7 @@ import About from "./pages/About"
 import Booking from "./pages/booking"
 import AdminDashboard from "./pages/adminDashboard"
 import Login from "./pages/Login"
-import Contact from "./pages/contact"
+import Contact from "./pages/Contact"
 import Store from "./pages/Store"
 import Show from "./pages/show"
 
