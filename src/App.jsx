@@ -8,7 +8,7 @@ import AdminDashboard from "./pages/adminDashboard"
 import Login from "./pages/Login"
 import Contact from "./pages/Contact"
 import Store from "./pages/Store"
-import Show from "./pages/show"
+import Show from "./pages/Show"
 
 function App() {
   const isAdmin = localStorage.getItem("isAdmin") === "true"
