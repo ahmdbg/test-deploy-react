@@ -1,6 +1,6 @@
 // File: client/src/pages/Booking.jsx
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 function Booking() {
   const navigate = useNavigate();
@@ -30,8 +30,9 @@ function Booking() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nama, jk, kelas, nama_murid: namaMurid, status, no_wa: noWa }),
       });
-      if (res.ok) {
-        navigate('/');
+      const data = await res.json();
+      if (data.success) {
+        navigate(`/konfirmasi/${data.id}`); // pakai ID hasil insert
       }
     } catch (err) {
       console.error(err);
@@ -102,7 +103,11 @@ function Booking() {
               className="w-full p-3 rounded-lg bg-[#0a192f] text-white border border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
-          <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-bold text-white transition">
+          <button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-bold text-white transition"
+            onClick={() => Navigate('/konfirmasi/:id')}
+          >
             Submit Tiket
           </button>
         </form>

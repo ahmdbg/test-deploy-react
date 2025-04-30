@@ -13,17 +13,20 @@ import { motion } from "motion/react";
 
 export function BentoGridDemo() {
   return (
-    <BentoGrid className="mx-auto px-16">
-      {items.map((item, i) => (
-        <BentoGridItem
-          key={i}
-          title={item.title}
-          description={item.description}
-          header={item.header}
-          icon={item.icon}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
-        />
-      ))}
+    <>
+      <BentoGrid className="mx-auto px-16">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            icon={item.icon}
+            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          />
+        ))}
+
+      </BentoGrid>
       <motion.a
         whileHover={{ scale: 1.1 }}
         initial={{ opacity: 0.5, y: 100 }}
@@ -39,8 +42,7 @@ export function BentoGridDemo() {
       >
         Get ticket NOW
       </motion.a>
-
-    </BentoGrid>
+    </>
   );
 }
 

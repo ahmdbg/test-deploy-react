@@ -9,6 +9,7 @@ import Login from "./pages/Login"
 import Contact from "./pages/Contact"
 import Store from "./pages/Store"
 import Show from "./pages/Show"
+import KonfirmasiPage from "./pages/KonfirmasiPage"
 
 function App() {
   const isAdmin = localStorage.getItem("isAdmin") === "true"
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Store />} />
           <Route path="/show" element={<Show />} />
+          <Route path="/konfirmasi/:id" element={<KonfirmasiPage />} />
         </Routes>
       </BrowserRouter>
     </>
