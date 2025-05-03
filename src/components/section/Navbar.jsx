@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/NavbarMenu";
 import { cn } from "../../utils/cn";
 
-export function NavbarDemo() {
+export default function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
       <Navbar className="top-2" />
@@ -90,30 +90,30 @@ function Navbar({ className }) {
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white mb-3">Services</h3>
               <div className="flex flex-col space-y-3 ">
-                <HoveredLink href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</HoveredLink>
-                <HoveredLink href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About Us</HoveredLink>
-                <HoveredLink href="/gallery" className="text-gray-600 hover:text-gray-900 transition-colors">Gallery</HoveredLink>
-                <HoveredLink href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</HoveredLink>
+                <HoveredLink href="/" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Home</HoveredLink>
+                <HoveredLink href="/about" className="text-gray-600 hover:text-gray-900 w-full transition-colors">About Us</HoveredLink>
+                <HoveredLink href="/gallery" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Gallery</HoveredLink>
+                <HoveredLink href="/contact" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Contact</HoveredLink>
               </div>
             </div>
             
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white mb-3">Products</h3>
               <div className="flex flex-col space-y-3 pl-2">
-                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 transition-colors">Algochurn</HoveredLink>
-                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 transition-colors">Tailwind Master Kit</HoveredLink>
-                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 transition-colors">Moonbeam</HoveredLink>
-                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 transition-colors">Rogue</HoveredLink>
+                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Algochurn</HoveredLink>
+                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Tailwind Master Kit</HoveredLink>
+                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Moonbeam</HoveredLink>
+                <HoveredLink href="/store" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Rogue</HoveredLink>
               </div>
             </div>
 
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white mb-3">Pricing</h3>
               <div className="flex flex-col space-y-3 pl-2">
-                <HoveredLink href="/hobby" className="text-gray-600 hover:text-gray-900 transition-colors">Hobby</HoveredLink>
-                <HoveredLink href="/individual" className="text-gray-600 hover:text-gray-900 transition-colors">Individual</HoveredLink>
-                <HoveredLink href="/team" className="text-gray-600 hover:text-gray-900 transition-colors">Team</HoveredLink>
-                <HoveredLink href="/enterprise" className="text-gray-600 hover:text-gray-900 transition-colors">Enterprise</HoveredLink>
+                <HoveredLink href="/hobby" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Hobby</HoveredLink>
+                <HoveredLink href="/individual" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Individual</HoveredLink>
+                <HoveredLink href="/team" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Team</HoveredLink>
+                <HoveredLink href="/enterprise" className="text-gray-600 hover:text-gray-900 w-full transition-colors">Enterprise</HoveredLink>
               </div>
             </div>
           </div>

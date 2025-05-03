@@ -44,9 +44,9 @@ const Footer = () => {
                     {/* Contact */}
                     <div className="flex flex-col gap-2 space-y-1">
                         <h3 className="text-2xl font-bold mb-4 text-cyan-400">Social Media</h3>
-                        <a href="#" className="hover:text-cyan-400 transition-colors duration-300">Instagram</a>
-                        <a href="#" className="hover:text-cyan-400 transition-colors duration-300">YouTube</a>
-                        <a href="#" className="hover:text-cyan-400 transition-colors duration-300">Facebook</a>
+                        <a href="https://www.instagram.com/amerta_ns/" className="hover:text-cyan-400 transition-colors duration-300">Instagram</a>
+                        <a href="https://www.youtube.com/@PPTQABI-UMMIAMPEL" className="hover:text-cyan-400 transition-colors duration-300">YouTube</a>
+                        <a href="https://www.tiktok.com/@amerta.ns" className="hover:text-cyan-400 transition-colors duration-300">TikTok</a>
                     </div>
 
                 </div>
@@ -58,9 +58,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
                     <p className="mb-4 md:mb-0">&copy; 2025 Amerta. All rights reserved.</p>
                     <div className="flex space-x-6">
-                        <a href="#" className="hover:text-cyan-400 transition-colors duration-300">Instagram</a>
-                        <a href="#" className="hover:text-cyan-400 transition-colors duration-300">YouTube</a>
-                        <a href="#" className="hover:text-cyan-400 transition-colors duration-300">Facebook</a>
+                        <p>made by ahmad hasan</p>
                     </div>
                 </div>
 

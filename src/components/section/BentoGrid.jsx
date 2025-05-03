@@ -11,7 +11,7 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 
-export function BentoGridDemo() {
+export default function BentoGridDemo() {
   return (
     <div className="container mx-auto px-4 py-12 flex flex-col items-center">
       <BentoGrid className="max-w-7xl">
@@ -47,12 +47,12 @@ export function BentoGridDemo() {
 
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "Medley Tari Tradisional",
+    description: "Gabungan tari-tari daerah yang mencerminkan kekayaan budaya nusantara.",
     header: (
       <img
-        src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80"
-        alt="The Dawn of Innovation"
+        src="public/show/image-1.webp"
+        alt="Medley Tari Tradisional"
         className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
         style={{ objectPosition: "center 40%" }}
       />
@@ -60,101 +60,55 @@ const items = [
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "Tari Perang",
+    description: "Tarian energik yang menggambarkan semangat juang dan keberanian para prajurit.",
     header: (
       <img
-        src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80"
-        alt="The Digital Revolution"
+        src="public/show/image-4.webp"
+        alt="Tari Perang"
         className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
         style={{ objectPosition: "center 40%" }}
-
       />
     ),
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "Tari Pabat Pibui",
+    description: "Tarian etnik penuh warna yang mengangkat budaya lokal dengan gerak dinamis.",
     header: (
       <img
-        src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80"
-        alt="The Art of Design"
+        src="public/show/image-8.webp"
+        alt="Tari Pabat Pibui"
         className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
         style={{ objectPosition: "center 40%" }}
-
       />
     ),
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Power of Communication",
-    description: "Understand the impact of effective communication in our lives.",
+    title: "Drama Musikal",
+    description: "Cerita yang dihidupkan dengan perpaduan akting, musik, dan tarian panggung.",
     header: (
       <img
-        src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80"
-        alt="The Power of Communication"
+        src="public/show/image-12.webp"
+        alt="Drama Musikal"
         className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
         style={{ objectPosition: "center 40%" }}
-
       />
     ),
     icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
+    title: "Pantomim",
+    description: "Ekspresi tanpa kata yang menyentuh, mengandalkan gerak dan mimik wajah.",
     header: (
       <img
-        src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80"
-        alt="The Pursuit of Knowledge"
+        src="public/show/image-2.webp"
+        alt="Pantomim"
         className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
         style={{ objectPosition: "center 40%" }}
-
-      />
-    ),
-    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: (
-      <img
-        src="https://images.unsplash.com/photo-1744894203359-baffe11eb6de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="The Joy of Creation"
-        className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
-        style={{ objectPosition: "center 40%" }}
-
       />
     ),
     icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
-    header: (
-      <img
-        src="https://images.unsplash.com/photo-1744894203359-baffe11eb6de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="The Joy of Creation"
-        className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
-        style={{ objectPosition: "center 40%" }}
-
-      />
-    ),
-    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
-    header: (
-      <img
-        src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3070&q=80"
-        alt="The Spirit of Adventure"
-        className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl object-cover"
-        style={{ objectPosition: "center 40%" }}
-
-      />
-    ),
-    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
   },
 ];

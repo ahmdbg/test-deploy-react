@@ -4,7 +4,7 @@ import { Boxes } from "../ui/Background-boxes";
 import { cn } from "../../utils/cn"; // Pastikan path ini sesuai dengan struktur folder kamu
 import AboutSection from "./AboutSection";
 
-export function BackgroundBoxesDemo() {
+export default function BackgroundBoxesDemo() {
   return (
     <div
       className="h-[1000px] relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">

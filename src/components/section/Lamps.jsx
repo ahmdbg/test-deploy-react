@@ -2,7 +2,7 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export function LampDemo() {
+export default function LampDemo() {
   const { scrollYProgress } = useScroll();
   // Menyesuaikan nilai transform untuk berbagai ukuran layar
   const y = useTransform(scrollYProgress, [0, 1], [0, -150]);
