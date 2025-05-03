@@ -5,27 +5,82 @@ import Footer from "../components/section/Footer"
 import { NavbarDemo } from "../components/section/Navbar"
 import { BackgroundBoxesDemo } from "../components/section/Background-boxer"
 import About from "../components/section/About"
-
-
+import TestimonialCarousel from "../components/section/Testimonial"
+import SponsorCarousel from "../components/section/Sponsor"
+import { motion } from "framer-motion"
 
 function Home() {
-
   return (
-    <>
+    <main className="bg-black min-h-screen">
       <NavbarDemo />
-      <HeroParallaxDemo />
-      <About />
+      
+      {/* Hero Section */}
+      <section className="relative">
+        <HeroParallaxDemo />
+      </section>
 
-      <h2 className="text-4xl font-extrabold text-center mt-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg transform transition-all duration-300 hover:scale-105 py-10">
-        OUR PERFORMANCE
-      </h2>
-      <BentoGridDemo />
+      {/* About Section with Padding */}
+      <section className="py-20">
+        <About />
+      </section>
 
-      <BackgroundBoxesDemo />
-      <LampDemo />
+      {/* Performance Section */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 transform transition-all duration-300"
+          >
+            OUR PERFORMANCE
+          </motion.h2>
+          <BentoGridDemo />
+        </div>
+      </section>
+
+      {/* Background Boxes Section */}
+      <section className="py-20">
+        <BackgroundBoxesDemo />
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-b from-black/50 to-purple-900/20">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-bold text-center mb-12 text-white"
+          >
+            What People Say
+          </motion.h2>
+          <TestimonialCarousel />
+        </div>
+      </section>
+
+      {/* Event Highlight Section */}
+      <section className="relative">
+        <LampDemo />
+      </section>
+
+      {/* Sponsors Section */}
+      <section className="py-20 bg-gradient-to-b from-black to-purple-900/10">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-bold text-center mb-12 text-white"
+          >
+            Our Sponsors
+          </motion.h2>
+          <SponsorCarousel />
+        </div>
+      </section>
 
       <Footer />
-    </>
+    </main>
   )
 }
 

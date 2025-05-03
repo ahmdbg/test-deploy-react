@@ -25,3 +25,28 @@
     }
   }
 }
+
+@layer base {
+  body {
+    @apply bg-black;
+  }
+
+  .container {
+    @apply max-w-[1440px] mx-auto;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

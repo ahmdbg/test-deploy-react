@@ -94,7 +94,7 @@ function Booking() {
             >
               <option value="">Pilih Status</option>
               <option value="menginap">Menginap</option>
-              <option value="tidak">Tidak Menginap</option>
+              <option value="tidak menginap">Tidak Menginap</option>
             </select>
           </div>
           <div>

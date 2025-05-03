@@ -16,6 +16,7 @@ function KonfirmasiPage() {
             .then(res => res.json())
             .then(setData)
             .catch(err => console.error(err));
+            
     }, [id]);
 
     if (!data) return <p className="text-center text-white">Loading...</p>;
@@ -50,6 +51,7 @@ function KonfirmasiPage() {
                 <p><strong>Kelas:</strong> {data.kelas}</p>
                 <p><strong>Status:</strong> {data.status}</p>
                 <p><strong>WhatsApp:</strong> {data.no_wa}</p>
+                <p><strong>Nomor Kursi:</strong> {data.nomor_kursi}</p>
 
                 <div className="mt-8 bg-white p-4 rounded-lg shadow-md">
                     <QRCodeCanvas value={urlKonfirmasi} size={128} />

@@ -13,8 +13,8 @@ import { motion } from "motion/react";
 
 export function BentoGridDemo() {
   return (
-    <>
-      <BentoGrid className="mx-auto px-16">
+    <div className="container mx-auto px-4 py-12 flex flex-col items-center">
+      <BentoGrid className="max-w-7xl">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -22,27 +22,26 @@ export function BentoGridDemo() {
             description={item.description}
             header={item.header}
             icon={item.icon}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+            className={`${i === 3 || i === 6 ? "md:col-span-2" : ""} hover:shadow-xl transition-shadow duration-300`}
           />
         ))}
-
       </BentoGrid>
+      
       <motion.a
-        whileHover={{ scale: 1.1 }}
-        initial={{ opacity: 0.5, y: 100 }}
+        whileHover={{ scale: 1.05 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
+          delay: 0.2,
+          duration: 0.5,
+          ease: "easeOut",
         }}
-        className="mt-8 bg-gradient-to-br cursor-pointer from-slate-300 to-slate-500 py-2 bg-clip-text text-center text-xl font-medium tracking-tight  md:text-xl sm:text-sm border-2 border-slate-300 rounded-4xl px-4  text-white hover:bg-slate-300 hover:text-blue-950 hover:border-blue-900 transition duration-300 ease-in-out"
-        // onClick={() => Navigate("/booking")}
+        className="mt-12 inline-block px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
         href="/show"
       >
-        Get ticket NOW
+        Explore More
       </motion.a>
-    </>
+    </div>
   );
 }
 

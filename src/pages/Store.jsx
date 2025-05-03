@@ -16,13 +16,14 @@ function Store() {
       { id: 2, name: 'Topi Eksklusif', price: 80000, image: '/images/topi.jpg', description: 'Topi yang menawan untuk acara.' },
       { id: 3, name: 'Tumbler Limited', price: 100000, image: '/images/tumbler.jpg', description: 'Tumbler yang menawan untuk acara.'  },
       { id: 4, name: 'Goodie Bag', price: 50000, image: '/images/goodie.jpg' , description: 'Goodie bag untuk acara.'  },
+      { id: 5, name: 'Goodie Bag', price: 50000, image: '/images/goodie.jpg' , description: 'Goodie bag untuk acara.'  },
     ]);
   }, []);
 
   return (
     <>
       <NavbarDemo />
-      <div className="min-h-screen bg-gradient-to-br from-[#0a192f] to-[#112240] text-white">
+      <div className="min-h-screen bg-gradient-to-br bg-black text-white">
         {/* Hero Section */}
         <AuroraBackgroundDemo />
         {/* Pernak-pernik tambahan */}
