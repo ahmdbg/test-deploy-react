@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const TestimonialCarousel = () => {
     const testimonials = [
@@ -37,19 +38,14 @@ const TestimonialCarousel = () => {
             if (!isPaused) {
                 setActiveIndex((prev) => (prev + 1) % testimonials.length);
             }
-        }, 5000); // Ganti slide setiap 5 detik
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [isPaused, testimonials.length]);
 
-    // Navigation dots
-    const goToIndex = (index) => {
-        setActiveIndex(index);
-    };
-
     return (
         <div
-            className="relative w-full overflow-hidden h-96"
+            className="relative w-full overflow-hidden min-h-[400px]"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
         >
@@ -58,18 +54,28 @@ const TestimonialCarousel = () => {
                 style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
                 {testimonials.map((testimonial) => (
-                    <div
+                    <motion.div
                         key={testimonial.id}
                         className="w-full flex-shrink-0 p-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
-                            <p className="text-gray-600 text-lg italic mb-6">"{testimonial.text}"</p>
+                        <div className="max-w-2xl mx-auto backdrop-blur-sm bg-white/10 rounded-xl 
+                            border border-white/20 p-8 shadow-lg hover:shadow-xl 
+                            transition-all duration-300">
+                            <p className="text-white/80 text-lg italic mb-6 leading-relaxed">
+                                "{testimonial.text}"
+                            </p>
                             <div className="text-right">
-                                <h3 className="text-xl font-semibold text-gray-800">{testimonial.name}</h3>
-                                <p className="text-gray-600">{testimonial.role}</p>
+                                <h3 className="text-xl font-semibold bg-clip-text text-transparent 
+                                    bg-gradient-to-r from-[#025f92] to-[#1b425c]">
+                                    {testimonial.name}
+                                </h3>
+                                <p className="text-white/60">{testimonial.role}</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 
@@ -78,9 +84,11 @@ const TestimonialCarousel = () => {
                 {testimonials.map((_, index) => (
                     <button
                         key={index}
-                        onClick={() => goToIndex(index)}
-                        className={`w-3 h-3 rounded-full ${index === activeIndex ? 'bg-blue-600' : 'bg-gray-300'
-                            }`}
+                        onClick={() => setActiveIndex(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 
+                            ${index === activeIndex 
+                                ? 'bg-gradient-to-r from-[#025f92] to-[#1b425c] scale-125' 
+                                : 'bg-white/20 hover:bg-white/40'}`}
                     />
                 ))}
             </div>

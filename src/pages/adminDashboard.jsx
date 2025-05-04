@@ -45,24 +45,28 @@ function AdminDashboard() {
                         <thead>
                             <tr className="bg-blue-800 text-white">
                                 <th className="p-4">No</th>
+                                <th className="p-4">ID</th>
                                 <th className="p-4">Nama Ortu/Wali</th>
                                 <th className="p-4">JK</th>
                                 <th className="p-4">Kelas</th>
                                 <th className="p-4">Murid</th>
                                 <th className="p-4">Status</th>
                                 <th className="p-4">No WA</th>
+                                <th className="p-4">Status tiket</th>
                             </tr>
                         </thead>
                         <tbody>
                             {pengunjung.map((p, idx) => (
                                 <tr key={p.id} className="hover:bg-blue-900 border-b border-blue-700">
                                     <td className="p-4">{idx + 1}</td>
+                                    <td className="p-4">{p.id}</td>
                                     <td className="p-4">{p.nama}</td>
                                     <td className="p-4">{p.jk}</td>
                                     <td className="p-4">{p.kelas}</td>
                                     <td className="p-4">{p.nama_murid}</td>
                                     <td className="p-4">{p.status}</td>
                                     <td className="p-4">{p.no_wa}</td>
+                                    <td className="p-4">{p.status_pakai}</td>
                                 </tr>
                             ))}
                         </tbody>

@@ -1,62 +1,113 @@
 "use client";
 import React from "react";
 import { StickyScroll } from "../ui/Sticky-Scroll-Reveal";
-
+import { motion } from "framer-motion";
 
 const content = [
     {
-        title: "Collaborative Editing",
+        title: "Amerta Night Show",
         description:
-            "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+            "Nikmati keindahan seni tradisional yang dipadukan dengan teknologi modern. Pertunjukan yang memukau dengan tata cahaya dan multimedia yang memanjakan mata.",
         content: (
-            <div
-                className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-                Collaborative Editing
-            </div>
-        ),
-    },
-    {
-        title: "Real time changes",
-        description:
-            "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-        content: (
-            <div className="flex h-full w-full items-center justify-center text-white">
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex h-full w-full items-center justify-center bg-gradient-to-r from-[#025f92] to-[#1b425c] rounded-2xl p-8 backdrop-blur-sm bg-opacity-20"
+            >
                 <img
-                    src="/linear.webp"
-                    width={300}
-                    height={300}
-                    className="h-full w-full object-cover"
-                    alt="linear board demo" />
-            </div>
+                    src="/show/image-1.webp"
+                    className="h-full w-full object-cover rounded-xl shadow-2xl"
+                    alt="Amerta Night Show"
+                />
+            </motion.div>
         ),
     },
     {
-        title: "Version control",
+        title: "Kolaborasi Seni",
         description:
-            "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+            "Saksikan perpaduan memukau antara tari tradisional, musik modern, dan teknologi visual yang menciptakan pengalaman pertunjukan yang tak terlupakan.",
         content: (
-            <div
-                className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-                Version control
-            </div>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex h-full w-full items-center justify-center bg-gradient-to-r from-[#1b425c] to-[#025f92] rounded-2xl p-8 backdrop-blur-sm bg-opacity-20"
+            >
+                <img
+                    src="/show/image-4.webp"
+                    className="h-full w-full object-cover rounded-xl shadow-2xl"
+                    alt="Kolaborasi Seni"
+                />
+            </motion.div>
         ),
     },
     {
-        title: "Running out of content",
+        title: "Warisan Budaya",
         description:
-            "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+            "Melestarikan warisan budaya Indonesia melalui pertunjukan yang inovatif. Menginspirasi generasi muda untuk mencintai dan menjaga kekayaan budaya nusantara.",
         content: (
-            <div
-                className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-                Running out of content
-            </div>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex h-full w-full items-center justify-center bg-gradient-to-r from-[#025f92] to-[#1b425c] rounded-2xl p-8 backdrop-blur-sm bg-opacity-20"
+            >
+                <img
+                    src="/show/image-8.webp"
+                    className="h-full w-full object-cover rounded-xl shadow-2xl"
+                    alt="Warisan Budaya"
+                />
+            </motion.div>
+        ),
+    },
+    {
+        title: "Teknologi Modern",
+        description:
+            "Menghadirkan pengalaman visual yang memukau dengan teknologi terkini. Gabungan sempurna antara seni tradisional dan inovasi modern dalam satu pertunjukan spektakuler.",
+        content: (
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="flex h-full w-full items-center justify-center bg-gradient-to-r from-[#1b425c] to-[#025f92] rounded-2xl p-8 backdrop-blur-sm bg-opacity-20"
+            >
+                <img
+                    src="/show/image-12.webp"
+                    className="h-full w-full object-cover rounded-xl shadow-2xl"
+                    alt="Teknologi Modern"
+                />
+            </motion.div>
         ),
     },
 ];
+
 export function StickyScrollRevealDemo() {
     return (
-        <div className="w-full py-4 h-[100vh]">
-            <StickyScroll content={content} />
+        <div className="relative w-full py-4 min-h-screen">
+            {/* Background with gradient overlay */}
+            <div 
+                className="absolute inset-0 z-0"
+                style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    filter: "brightness(0.3)"
+                }}
+            />
+            
+            {/* Gradient Overlay */}
+            <div 
+                className="absolute inset-0 z-1"
+                style={{
+                    background: "linear-gradient(45deg, rgba(2,95,146,0.2), rgba(27,66,92,0.2), rgba(0,0,0,0.2))"
+                }}
+            />
+
+            {/* Content */}
+            <div className="relative z-10">
+                <StickyScroll content={content} />
+            </div>
         </div>
     );
 }

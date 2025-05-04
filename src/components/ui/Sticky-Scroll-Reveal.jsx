@@ -27,10 +27,10 @@ export const StickyScroll = ({ content, contentClassName }) => {
     });
 
     const backgroundColors = [
-        "#0f172a", // slate-900
-        "#000000", // black
-        "#171717", // neutral-900
-        "#1e293b", // slate-800
+        "rgba(15, 23, 42, 0.2)", // slate-900 with transparency
+        "rgba(0, 0, 0, 0.2)", // black with transparency
+        "rgba(23, 23, 23, 0.2)", // neutral-900 with transparency
+        "rgba(30, 41, 59, 0.2)", // slate-800 with transparency
     ];
 
     const linearGradients = [
@@ -48,7 +48,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
             animate={{
                 backgroundColor: backgroundColors[activeCard % backgroundColors.length],
             }}
-            className="relative flex flex-row h-[100vh] justify-center space-x-10 w-full overflow-y-auto rounded-md p-10"
+            className="relative flex flex-row h-[100vh] justify-center space-x-10 w-full overflow-y-auto rounded-md p-10 backdrop-blur-md"
             ref={ref}
         >
             <div className="relative flex items-start px-4">

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavbarDemo } from '../components/section/Navbar'
+import NavbarDemo from '../components/section/Navbar'
 import Footer from '../components/section/Footer'
 import { WavyBackground } from '../components/ui/wavy-background'
 import ShowGrid from '../components/section/Show'

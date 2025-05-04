@@ -3,7 +3,7 @@ import { Vortex } from "../ui/vortex";
 
 export function VortexDemo() {
     return (
-        <div className="w-[calc(100%-4rem)] mx-auto rounded-md h-[30rem] overflow-hidden pt-[10vh]">
+        <div className="rounded-md h-[30rem] overflow-hidden pt-[10vh]">
             <Vortex
                 backgroundColor="#000000"
                 particleCount={200} // bisa diatur sesuai keinginan

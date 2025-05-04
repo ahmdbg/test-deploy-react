@@ -1,10 +1,10 @@
 // File: client/src/pages/Store.jsx
 import { useEffect, useState } from 'react';
-import { NavbarDemo } from '../components/section/Navbar';
+import NavbarDemo from '../components/section/Navbar';
 import Footer from '../components/section/Footer';
 import { AuroraBackgroundDemo } from '../components/section/AuroraBg';
 import { BackgroundGradient } from '../components/ui/background-gradien';
-import { IconAppWindow } from '@tabler/icons-react';
+// import { IconAppWindow } from '@tabler/icons-react';
 
 function Store() {
   const [products, setProducts] = useState([]);

@@ -8,85 +8,85 @@ const ShowGrid = () => {
         {
             id: 1,
             title: "Hadrah dan Nasyid",
-            image: "public/show/image-14.webp",
+            image: "show/image-14.webp",
             description: "Pertunjukan religi yang memadukan tabuhan hadrah dengan nyanyian islami, menghadirkan nuansa spiritual dalam setiap irama dan lantunan indahnya."
         },
         {
             id: 2,
             title: "Medley Tari Tradisional",
-            image: "public/show/image-1.webp",
+            image: "show/image-1.webp",
             description: "Rangkaian tarian daerah yang dipentaskan secara berurutan, menampilkan keberagaman budaya nusantara dalam satu pertunjukan yang memukau."
         },
         {
             id: 3,
             title: "Pantomim",
-            image: "public/show/image-2.webp",
+            image: "show/image-2.webp",
             description: "Seni pertunjukan tanpa dialog yang mengandalkan bahasa tubuh dan ekspresi wajah untuk menyampaikan cerita dengan cara unik."
         },
         {
             id: 4,
             title: "Drama dan Teater",
-            image: "public/show/image-3.webp",
+            image: "show/image-3.webp",
             description: "Pertunjukan seni peran yang menghadirkan cerita kehidupan melalui dialog dan akting, mengajak penonton menyelami berbagai emosi."
         },
         {
             id: 5,
             title: "Tari Perang",
-            image: "public/show/image-4.webp",
+            image: "show/image-4.webp",
             description: "Tarian yang menggambarkan semangat perjuangan dan keberanian para prajurit dalam medan perang melalui gerakan dinamis."
         },
         {
             id: 6,
             title: "Variasi PBB",
-            image: "public/show/image-5.webp",
+            image: "show/image-5.webp",
             description: "Demonstrasi baris-berbaris yang dikemas dengan formasi unik dan gerakan terkoordinasi, menunjukkan kedisiplinan dan kekompakan tim."
         },
         {
             id: 7,
             title: "Syarhil",
-            image: "public/show/image-6.webp",
+            image: "show/image-6.webp",
             description: "Penampilan dakwah yang memadukan tilawah dengan penjelasan ayat Al-Quran, disampaikan dengan gaya yang menarik dan inspiratif."
         },
         {
             id: 8,
             title: "Tari Randai",
-            image: "public/show/image-7.webp",
+            image: "show/image-7.webp",
             description: "Tarian tradisional Minangkabau yang menggabungkan unsur silat dan cerita rakyat dalam pertunjukan yang energik dan menghibur."
         },
         {
             id: 9,
             title: "Tari Pabat Pibui",
-            image: "public/show/image-8.webp",
+            image: "show/image-8.webp",
             description: "Tarian etnik yang menceritakan keindahan budaya lokal melalui gerakan dan kostum warna-warni yang memukau penonton."
         },
         {
             id: 10,
             title: "Beauty of Java",
-            image: "public/show/image-9.webp",
+            image: "show/image-9.webp",
             description: "Tarian yang menampilkan keanggunan budaya Jawa melalui gerakan lemah gemulai dan filosofi mendalam tentang kehidupan."
         },
         {
             id: 11,
             title: "Tari Pakarena Organza",
-            image: "public/show/image-10.webp",
+            image: "show/image-10.webp",
             description: "Perpaduan tarian klasik Sulawesi dengan sentuhan modern, menghadirkan keindahan gerak yang anggun dan memesona."
         },
         {
             id: 12,
             title: "Spirit of Papua",
-            image: "public/show/image-11.webp",
+            image: "show/image-11.webp",
             description: "Pertunjukan yang mengangkat kekayaan budaya Papua melalui tarian dinamis dan musik tradisional yang penuh semangat."
         },
         {
             id: 13,
             title: "Drama Musikal",
-            image: "public/show/image-12.webp",
+            image: "show/image-12.webp",
             description: "Pertunjukan yang memadukan cerita, musik, dan tarian dalam satu kesatuan, menciptakan pengalaman teater yang mengesankan."
         },
         {
             id: 14,
             title: "Puncak Gelora",
-            image: "public/show/image-13.webp",
+            image: "show/image-13.webp",
             description: "Penampilan spektakuler yang menyatukan berbagai elemen seni pertunjukan dalam sebuah klimaks yang memukau dan berkesan."
         }
     ];

@@ -21,56 +21,49 @@ const LoadingSpinner = () => (
 
 function Home() {
   return (
-    <main className="bg-black min-h-screen">
+    <main className="bg-black min-h-screen relative overflow-hidden">
       <Suspense fallback={<LoadingSpinner />}>
         <NavbarDemo />
 
-        {/* Hero Section */}
-        <section className="relative">
+        {/* Hero Section - Full height with no padding */}
+        <section className="relative min-h-screen">
           <Suspense fallback={<LoadingSpinner />}>
             <HeroParallaxDemo />
           </Suspense>
         </section>
 
-        {/* About Section with Padding */}
-        <section className="py-20">
+        {/* About Section - With proper spacing */}
+        <section className="relative min-h-screen py-2 md:py-4">
           <Suspense fallback={<LoadingSpinner />}>
             <About />
           </Suspense>
         </section>
 
-        {/* Performance Section */}
-        <section className="py-20 relative">
-          <div className="container mx-auto px-4">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-5xl font-extrabold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 transform transition-all duration-300"
-            >
-              OUR PERFORMANCE
-            </motion.h2>
-            <Suspense fallback={<LoadingSpinner />}>
-              <BentoGridDemo />
-            </Suspense>
-          </div>
+        {/* Performance Section - With gradient separator */}
+        <section className="relative min-h-screen py-2 md:py-4">
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black to-transparent"></div>
+          <Suspense fallback={<LoadingSpinner />}>
+            <BentoGridDemo />
+          </Suspense>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
         </section>
 
         {/* Background Boxes Section */}
-        <section className="py-20">
+        <section className="relative min-h-screen py-2 md:py-4">
           <Suspense fallback={<LoadingSpinner />}>
             <BackgroundBoxesDemo />
           </Suspense>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 bg-gradient-to-b from-black/50 to-purple-900/20">
-          <div className="container mx-auto px-4">
+        {/* Testimonials Section - With custom background */}
+        <section className="relative min-h-screen py-32 md:py-40">
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-[#025f92]/20 to-[#1b425c]/20 pointer-events-none"></div>
+          <div className="container relative mx-auto px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold text-center mb-12 text-white"
+              className="text-4xl md:text-5xl font-bold text-center mb-20 text-white"
             >
               What People Say
             </motion.h2>
@@ -81,20 +74,21 @@ function Home() {
         </section>
 
         {/* Event Highlight Section */}
-        <section className="relative">
+        <section className="relative min-h-screen py-2 md:py-4">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1b425c]/20 to-black pointer-events-none"></div>
           <Suspense fallback={<LoadingSpinner />}>
             <LampDemo />
           </Suspense>
         </section>
 
-        {/* Sponsors Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-purple-900/10">
-          <div className="container mx-auto px-4">
+        {/* Sponsors Section - With improved spacing */}
+        <section className="relative py-2 md:py-4">
+          <div className="container relative mx-auto px-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-3xl font-bold text-center mb-12 text-white"
+              className="text-3xl md:text-4xl font-bold text-center mb-20 text-white"
             >
               Our Sponsors
             </motion.h2>
